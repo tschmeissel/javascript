@@ -1,3 +1,11 @@
+// How is this code waiting for one after another?
+/**
+ * Get a response by an URL. The callback function
+ * will then be called with the response as a
+ * parameter.
+ * @param url
+ * @param callback function
+ */
 function fakeAjax(url, cb) {
 	var fake_responses = {
 		"file1": "The first text",
@@ -17,6 +25,12 @@ function output(text) {
 	console.log(text);
 }
 
+/**
+ * makes a fake ajax call
+ * thunk constructor
+ * @param file name
+ * @return a thunk anonymous function
+ */
 function getFile(file) {
 	var text, fn;
 	fakeAjax(file, function(response) {
@@ -30,6 +44,7 @@ function getFile(file) {
 	}
 }
 
+// construct thunks for later chaining
 var th1 = getFile("file1");
 var th2 = getFile("file2");
 var th3 = getFile("file3");
