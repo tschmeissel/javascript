@@ -23,12 +23,26 @@ function doThingsLast() {
 	});
 }
 
-doThingsFirst().then(function() {
+// bad promise nesting
+//doThingsFirst().then(function() {
+//	console.log("first things are done, process result");
+//	doThingsSecond().then(function() {
+//		console.log("second things are done, process result");
+//		doThingsLast().then(function() {
+//			console.log("last things are done, process result");
+//		}, error);
+//	}, error);
+//}, error);
+
+doThingsFirst()
+.then(function() {
 	console.log("first things are done, process result");
-	doThingsSecond().then(function() {
-		console.log("second things are done, process result");
-		doThingsLast().then(function() {
-			console.log("last things are done, process result");
-		}, error);
-	}, error);
-}, error);
+	return doThingsSecond();
+})
+.then(function() {
+	console.log("second things are done, process result");
+	return doThingsLast();
+})
+.then(function() {
+	console.log("last things are done, process result");
+})
