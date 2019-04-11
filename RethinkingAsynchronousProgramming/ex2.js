@@ -1,4 +1,3 @@
-// How is this code waiting for one after another?
 /**
  * Get a response by an URL. The callback function
  * will then be called with the response as a
