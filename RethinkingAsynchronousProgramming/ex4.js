@@ -35,43 +35,14 @@ function getFile(file) {
 	})
 }
 
-// this works too
-//getFile("file1")
-//.then(output)
-//.then(function() {
-//	//doesnexist();
-//	return getFile("file2")
-//})
-//.then(output)
-//.then(function() {
-//	return getFile("file3");
-//})
-//.then(output)
-//.then(function() {
-//	output("complete")
-//})
-//.catch(function(err) {
-//	console.error(err);
-//});
-
-var p1 = getFile("file1");
-var p2 = getFile("file2");
-var p3 = getFile("file3");
-
-p1
-.then(output)
-.then(function() {
-	doesnexist();
-	return p2;
-})
-.then(output)
-.then(function() {
-	return p3;
-})
-.then(output)
-.then(function() {
+["file1", "file2", "file3"]
+.map(getFile)
+.reduce(function combine(chain, pr) {
+	return chain.then(function() {
+		return pr;
+	}).then(output);
+//}, new Promise(function(resolve) {resolve();}));
+}, Promise.resolve()).
+then(function() {
 	output("complete");
-})
-.catch(function(error) {
-	console.error(error);
 });
