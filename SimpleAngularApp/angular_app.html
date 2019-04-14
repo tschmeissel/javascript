@@ -1,0 +1,29 @@
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<title>HTML5 template</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.js"></script>
+</head>
+<body>
+<h1>HTML5 template</h1>
+<script>
+//window.open("pdf.pdf")
+//var url = "http://10.1.4.226/osrenditioncache/app/api/document/58381/rendition/pdf?timeout=30000&t=1547640193383";
+//window.open(url)
+//var pdf = $http.get(url);
+
+var app = angular.module("myShoppingList", []);
+app.controller("myCtrl", function($scope, $http) {
+    $scope.products = ["Milk", "Bread", "Cheese"];
+});
+
+console.log("done");
+</script>
+
+<div ng-app="myShoppingList" ng-controller="myCtrl">
+    <ul>
+        <li ng-repeat="x in products">{{x}}</li>
+    </ul>
+</div>
+
+</body>

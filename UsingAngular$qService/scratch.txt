@@ -1,0 +1,33 @@
+Promises in Angular
+
+1.Muster
+ Ich bekomme vom $q Service ein defer Objekt.
+ var defered = $q.defer();
+ 
+ Von dem bekomme ich ein promise auf dem ich die Funktion then implementieren kann.
+ var promise = defered.promise;
+ promise.then(function(data) {
+ 	// code comes here
+ })
+ 
+ Diese Implementierung wird asynchron ausgeführt, wenn ich das defer resolve.
+ defered.resolve(data)
+ 
+ Was ich als data übergebe, kann ich in then als Funktionsparameter verwenden.
+
+2.Muster
+ Ich kann eine Funktion ein Promise zurückgeben lassen. Dann wird sie asynchron ausgeführt,
+ weil der Aurufer mit then weiter macht.
+ In der asynchronen Funktion wird das defer Objekt auch resolved. Über das Handling mit
+ then ist garantiert, das die resolvden Daten in then auch zur Verfügung stehen.
+ Ich kann aber auch statt ein promise zurückzugeben, then gleich vor Ort implementieren.
+
+Fragen und Antworten
+ Wie läuft das mit dem verschachtelten Aufruf von Promises?
+ 
+ Warum sollte ich mir ein defered Objekt holen?
+  Wenn der code in dem ich mich aktuell befinde verzögert, asynchron o.ä. ausgeführt wird,
+  kann ich das Ergebnis seiner Abarbeitung nicht einfach weitergeben oder verarbeiten,
+  bevor er fertig ist. Da würde der Folgecode ins Leere laufen. Ich muss nach dem vorherigen
+  asnychronen code als das defered.resolve(...) aufrufen, damit
+  mir die Daten aus dem vorherigen code wirklich zur Verfügung stehen.

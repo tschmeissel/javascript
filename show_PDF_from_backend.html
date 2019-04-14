@@ -1,0 +1,32 @@
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<title>show PDF from backend</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.js"></script>
+</head>
+<body>
+<h1>show PDF from backend</h1>
+<script>
+// https://stackoverflow.com/questions/24288221/pdf-js-render-pdf-using-an-arraybuffer-or-blob-instead-of-url	
+// https://stackoverflow.com/questions/42106584/displaying-pdf-from-arraybuffer
+var app = angular.module("myShoppingList", []);
+
+app.controller("myCtrl", async function($scope, $http) {
+	var url = "http://localhost:7070/osrenditioncache/app/api/document/58381/rendition/pdf?timeout=30000&t=1547640193383";
+	
+	// make sure to set the correct response type
+	var pdfBuffer = await $http.get(url, {responseType: 'arraybuffer'});
+	
+	var pdfBlob = new Blob([pdfBuffer.data], {type: "application/pdf"});
+	var pdfUrl = window.URL.createObjectURL(pdfBlob);
+	window.open(pdfUrl);
+	window.URL.revokeObjectURL(pdfUrl);
+});
+
+console.log("done");
+</script>
+
+<div ng-app="myShoppingList" ng-controller="myCtrl">
+</div>
+
+</body>

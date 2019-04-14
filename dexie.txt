@@ -1,0 +1,28 @@
+https://dexie.org/docs/API-Reference
+
+window.profileDb.backendDB()
+
+window.profileDb.tables
+=>
+(2) [Table, Table]
+persistent, temporary
+
+window.profileDb.persistent
+=>
+table infos
+
+Datenbank öffnen
+await window.profileDb.open()
+
+Gesamten Inhalt der Tabelle persisiten ausgeben
+await window.profileDb.persistent.toArray().then(content => {console.log(content)});
+
+Anzahl der Datensätze ausgeben
+await window.profileDb.persistent.toCollection().count(count => {console.log("number of records:", count)})
+
+Gesamten Inhalt einer Spalte ausgeben
+var column = window.profileDb.persistent.where('key').equalsIgnoreCase('OfflineCache');
+
+Datenbank löschen
+await window.profileDb.delete();
+ nach dem Löschen wird die Datenbank geschlossen

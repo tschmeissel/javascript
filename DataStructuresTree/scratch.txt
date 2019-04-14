@@ -1,0 +1,34 @@
+see https://www.youtube.com/watch?v=0OkHnESpt1k
+
+start with
+ yarn run test
+ 
+TODO
+ Rückgabewerte für API Aufrufe klären
+
+Baum
+ /
+ /settings
+ /settings/client
+ /settings/web
+ /settings/common
+
+Ein Pfad beginnt immer mit der Wurzel und ende immer mit einem Knoten.
+
+API
+ add(path, node)
+ remove(path, node)
+ search(path)
+ 
+Kann ein binärer Baum verwendet werden? 
+ Nein
+  Da die Knoten keine Attribute haben, die sinnvoll mit kleiner oder größer verglichen werden können, kann ein binärer Baum hier keine Anwendung finden.
+  Bei einem binären Baum darf ein Elternteil zur 2 Kinder haben.
+Welche Datenstruktur kommt in Frage?
+ 
+Binärer Baum
+ direkter Graph
+ Jeder Knoten hat 2 Kinder
+ das linke Kind ist immer kleiner als das Elternteil
+ das rechte Kind ist immer größer als das Elternteil
+ 

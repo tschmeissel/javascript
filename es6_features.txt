@@ -1,0 +1,18 @@
+Benennung und Anwendung der ES6 Sprachfeatures
+ https://www.youtube.com/watch?v=AfWYO8t7ed4
+ https://www.youtube.com/watch?v=LmL0Gh193M0
+ 
+ transpiling
+ *destructering
+ *block scoping mit let
+ *default arguments
+ *template strings with back ticks
+ *const
+ class, static, extend
+ generator function
+  https://www.youtube.com/watch?annotation_id=annotation_15064051&feature=iv&src_vid=LmL0Gh193M0&v=QO07THdLWQo
+  Machen mit yield + Promise async Programmieren möglich
+ arrow function
+  lexical context binding
+ spread operator
+ await asnyc in die Ecma6 Feauture Liste

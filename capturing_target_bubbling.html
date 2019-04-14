@@ -1,0 +1,31 @@
+<!doctype html>
+<head>
+<! https://www.sitepoint.com/event-bubbling-javascript>
+<! propagation == capturing and bubbling>
+<meta charset="UTF-8">
+<title>HTML5 template</title>
+<script>
+function registerEvents() {
+	document.addEventListener("click", e => {
+		console.log("event captured at document", e.stopPropagation());
+	}, true);
+	
+	var li1 = document.getElementById("li1");
+	li1.addEventListener("click", e => {
+		console.log("click auf li1 captured");
+	}, true)
+	li1.addEventListener("click", e => {
+		console.log("click auf li1 bubbled");
+	}, false)
+}
+</script>
+</head>
+<body>
+<h1>HTML5 template</h1>
+<button onclick="registerEvents()">register click event</button>
+<ul>
+    <li id="li1"><a href="."><img src="" alt=""></a>
+    <li id="li2"><a href="."><img src="" alt=""></a>
+    <li id="li3"><a href="."><img src="" alt=""></a>
+</ul>
+</body>
