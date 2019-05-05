@@ -1,3 +1,6 @@
 Typescript, wann welcher Typ?
  https://www.typescriptlang.org/docs/handbook/declaration-files/do-s-and-don-ts.html
+
+null is a subtype of all primitives except void and undefined 
+undefined is a subtype of all types 
  
