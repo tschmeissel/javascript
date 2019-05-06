@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MyComponentComponent } from './my-component/my-component.component';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,8 @@ export class AppComponent {
   
 	constructor() {
 		this.interfaces();
+		
+		let myComponent: MyComponentComponent = new MyComponentComponent();
 	}
 
 	interfaces() {
