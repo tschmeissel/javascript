@@ -1,0 +1,7 @@
+RxJS crash course
+ https://www.youtube.com/watch?v=bFtDwNK-rtg
+ promises wait for a result
+ observables push a result at any time to the subscribers
+
+Observable.switchMap(...)
+ https://www.youtube.com/watch?v=6lKoLwGlglE
