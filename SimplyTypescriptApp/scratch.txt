@@ -1,0 +1,6 @@
+https://www.typescriptlang.org/docs/tutorial.html
+
+yarn install -g typescript
+tsc greeter.ts
+=>
+greeter.js
