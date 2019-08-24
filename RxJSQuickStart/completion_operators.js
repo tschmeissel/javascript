@@ -59,10 +59,6 @@ unfiltered
 
 // scan its like the reduce function
 
-// switchMap is useful to get an observable first before you can get another observable
-//  like when you need a user id before you can start something
-//  like you want to start a timer after some kind of event and stop it after another event
-
 // takeUntil can complete an observable based of a value from another observable
 
 // takeWhile will emit values from an observable until a certain condition becomes true

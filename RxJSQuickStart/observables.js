@@ -6,6 +6,7 @@ const observable = Rx.Observable.create(observer => {
 	observer.next("world");
 });
 observable.subscribe(val => print(val));
+observable.subscribe(val => print("s2" + val));
 
 // observable from event
 const clicks = Rx.Observable.fromEvent(document, "click");
