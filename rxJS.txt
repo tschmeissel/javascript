@@ -5,3 +5,8 @@ RxJS crash course
 
 Observable.switchMap(...)
  https://www.youtube.com/watch?v=6lKoLwGlglE
+ switchMap (cancel + emit new, e.g type-ahead, paging)
+ 
+mergeMap (for each run an async and subscribe, and emit stream of responses, order is not preserved)
+
+forkJoin (wait on multiple http requests - return an array of responses in preserved order when all are done) 
