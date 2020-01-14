@@ -1,3 +1,9 @@
+Unterschied of und from
+ of reicht seine Datein in einem Stück durch an den subscriber
+ from
+  iteriert darüber, wenn es sich z.B. um ein array handelt
+  akzeptiert auch ein promise
+
 RxJS crash course
  https://www.youtube.com/watch?v=bFtDwNK-rtg
  promises wait for a result
