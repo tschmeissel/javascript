@@ -1,3 +1,10 @@
+Array in Observable wrappen und filter wie array funktion
+ Ja, geht, aber for filter kommt ein pipe().
+ Man kann Operatoren nicht einfach an ein Observable hängen. Man muss sie mit pipe verknüpfen.
+ pipe gibts auch in einer standalone version
+ https://www.concretepage.com/angular/angular-observable-pipe
+ Liefert ein Observable zurück.
+
 Unterschied of und from
  of reicht seine Datein in einem Stück durch an den subscriber
  from
