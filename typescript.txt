@@ -3,4 +3,25 @@ Typescript, wann welcher Typ?
 
 null is a subtype of all primitives except void and undefined 
 undefined is a subtype of all types 
+
+Funktion definieren 
+ export const multiply = (a: number, b: number) => (a * b)
+ export const multiply = (a:number, b:number):number => a * b
  
+ export function multiply(...arr:number[]):number{
+  return arr.reduce((a,b)=>a*b,1)
+ }
+ 
+ export const numberToString = String
+ 
+Konvertierung Zahl nach String
+ `${num}`
+ ''+num
+ String(num)
+ num.toString()
+ num+''
+ JSON.stringify(num)
+ 
+Konvertierung String nach Array
+var arr1 = [...str]
+var arr2 = Array.from(str) 
