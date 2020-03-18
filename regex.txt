@@ -1,0 +1,36 @@
+Wozu sind die gut?
+ lookahead assertions (vorausschauenden Annahmen/Behauptungen) 
+
+https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Regular_Expressions
+
+/^.*$/.test("some string")
+
+var context = "Workflow" 
+/[workflow|processes|startable]/gi.test(context)
+=> true
+
+var context = "Workf" 
+/[workflow|processes|startable]/gi.test(context)
+=> true
+
+var context = "workflow" 
+/["workflow","processes","startable"]/gi.test(context)
+/["workflow","processes","startable"]?/gi.test("lkasjdf")
+
+/workflow|processes|startable/gi.test("workflow")
+=>
+true
+
+/workflow|processes|startable/gi.test("workflo")
+=>
+false
+
+Ob [], {} oder () vorkommt
+ /(\(\))|(\[\])|(\{\})/;
+ true
+  "([{}])"
+  "()"
+  "[({})](]"
+ false
+  "[(])"
