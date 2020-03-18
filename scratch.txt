@@ -1,0 +1,2 @@
+warum hasOwnProperty einer Map statt [] nehmen
+was ist der Unterschied

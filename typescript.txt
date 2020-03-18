@@ -26,6 +26,8 @@ Konvertierung Zahl nach String
  num+''
  JSON.stringify(num)
  
-Konvertierung String nach Array
-var arr1 = [...str]
-var arr2 = Array.from(str) 
+Konvertierung String nach Array, Set
+ for (let character of string) {}
+ var arr1 = [...str]
+ var arr2 = Array.from(str) 
+ let chars = new Set(str.toLowerCase()); // doppelte Buchstaben fliegen raus
