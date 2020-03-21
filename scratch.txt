@@ -1,2 +1,4 @@
+beim Javascript ist am String immer noch ein nicht sichtbares Zeichen am Ende.
+In Javascript sind alle Number Fließkommazahlen.
 warum hasOwnProperty einer Map statt [] nehmen
 was ist der Unterschied

@@ -31,3 +31,10 @@ Konvertierung String nach Array, Set
  var arr1 = [...str]
  var arr2 = Array.from(str) 
  let chars = new Set(str.toLowerCase()); // doppelte Buchstaben fliegen raus
+  [
+    ...arr1,
+    ...arr2
+  ];
+  
+Konvertierung string.split() => Array
+ let [latitude, longitude, ...rest] = coordinates.split(',');  
