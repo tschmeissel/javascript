@@ -1,3 +1,11 @@
+https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Regular_Expressions
+
+capturing parenthesis
+ () zeichnen einen Treffer auf
+ [] definieren einen Zeichenklasse zeichne aber nichts auf
+  Grupppen.
+
 Man kann mit regex Zahlen auf einen Wertbereich prüfen.
  "23.32353342,-32.543534534"
  // langitude = 23.32353342 darf zwischen -90 und 90 liegen
@@ -8,9 +16,6 @@ Man kann mit regex Zahlen auf einen Wertbereich prüfen.
  
 Wozu sind die gut?
  lookahead assertions (vorausschauenden Annahmen/Behauptungen) 
-
-https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/RegExp
-https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Regular_Expressions
 
 /^.*$/.test("some string")
 

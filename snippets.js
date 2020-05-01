@@ -1,3 +1,6 @@
+// Erzeugen von Unterarrays erzwingen
+["eins", "zwei"].map(word => [word.toUpperCase()])
+
 export function solution(roman: string): number {
   const table = {
     M : 1000,
