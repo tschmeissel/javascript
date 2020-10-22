@@ -1,3 +1,6 @@
+3.6.2020
+ eine async function kann mit call.Fake einen konkreten Wert ohne Promise.resolve zurückgeben
+
 https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Using_promises
 https://medium.com/@bluepnume/learn-about-promises-before-you-start-using-async-await-eb148164a9c8
 https://javascript.info/async-await
