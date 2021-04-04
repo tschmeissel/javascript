@@ -1,1 +1,1 @@
-# javascript
+# javascript in general
