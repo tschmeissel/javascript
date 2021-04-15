@@ -1,0 +1,7 @@
+Avoid referencing unbound methods which may cause unintentional scoping of `this`.(@typescript-eslint/unbound-method)
+ this.dmsContentService.printContentAsync
+ =>
+ this.dmsContentService.printContentAsync.bind(this.dmsContentService)
+
+anonymous async arrow function
+ (async() => {})()
