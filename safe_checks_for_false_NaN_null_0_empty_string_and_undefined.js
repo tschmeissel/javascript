@@ -1,4 +1,8 @@
+// there 6 falsy values in Javascript
 // best way to check for null, 0, false and 'undefined', NaN, ''
+
+// Tipp: Begrenze die Suche auf deutschsprachige Ergebnisse. Du kannst deine Suchsprache in den Einstellungen ändern.
+// In JavaScript, a truthy value is a value that translates to true when evaluated in a Boolean context. All values are truthy unless // they are defined as falsy (i.e., except for false , 0 , "" , null , undefined , and NaN ).
 
 var value;
 if (value) {
