@@ -1,0 +1,30 @@
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<title>HTML5 template</title>
+<script lang="javascript">
+console.log("iife = immediate invoke function expression");
+(function () {
+    console.log("inside a iife");
+})();
+(() => {
+let ar = "ljk";
+console.log("inside an iife", ar);
+})();
+var result = (() => "Barry")();
+console.log("result", result);
+result = (() => {
+	let result = "Larry";
+	return result;
+})();
+console.log("result", result);
+
+// passing values
+result = ((input) => {
+	console.log("input", input);
+})("some value")
+</script>
+</head>
+<body>
+<h1>iife</h1>
+</body>
