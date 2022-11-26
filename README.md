@@ -1,3 +1,6 @@
+Sandkasten
+ https://stackblitz.com/edit/typescript-b8govq?file=index.ts
+
 Was ist der Unterschied zwischen ?? und ||
  https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#nullish-coalescing
  || behandelt alles was falsy und schaltet um auf den alternativen Wert
