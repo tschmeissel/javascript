@@ -13,7 +13,7 @@ if (value) {
 
 // Furthermore, if you do not know whether a variable exists (that means, if it was declared) you should check with the typeof operator. For instance
 
-if( typeof foo !== 'undefined' ) {
+if (typeof foo !== 'undefined' ) {
 	// foo could get resolved and it's defined
 	console.log("defined foo");
 } else {
