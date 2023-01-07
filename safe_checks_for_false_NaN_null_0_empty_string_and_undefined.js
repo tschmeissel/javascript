@@ -9,6 +9,10 @@ if (value) {
 	//     empty string ("")
 	//     0
 	//     false
+    // will evaluate to true if value is:
+    //     true
+    //     " "
+    //     <>0
 }
 
 // Furthermore, if you do not know whether a variable exists (that means, if it was declared) you should check with the typeof operator. For instance
