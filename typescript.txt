@@ -1,7 +1,40 @@
-Avoid referencing unbound methods which may cause unintentional scoping of `this`.(@typescript-eslint/unbound-method)
- this.dmsContentService.printContentAsync
- =>
- this.dmsContentService.printContentAsync.bind(this.dmsContentService)
+The left-hand side of a 'for...of' statement cannot use a type annotation.
+ error => for (let i:number of numbers) {}
 
-anonymous async arrow function
- (async() => {})()
+
+Typescript, wann welcher Typ?
+ https://www.typescriptlang.org/docs/handbook/declaration-files/do-s-and-don-ts.html
+
+null is a subtype of all primitives except void and undefined 
+undefined is a subtype of all types 
+
+Funktion definieren
+ export const multiply = (a: number, b: number) => (a * b)
+ export const multiply = (a:number, b:number):number => a * b
+
+ export function multiply(...arr:number[]):number{
+  return arr.reduce((a,b)=>a*b,1)
+ }
+
+ export const numberToString = String
+
+Konvertierung Zahl nach String
+ `${num}`
+ ''+num
+ String(num)
+ num.toString()
+ num+''
+ JSON.stringify(num)
+
+Konvertierung String nach Array, Set
+ for (let character of string) {}
+ var arr1 = [...str]
+ var arr2 = Array.from(str)
+ let chars = new Set(str.toLowerCase()); // doppelte Buchstaben fliegen raus
+  [
+    ...arr1,
+    ...arr2
+  ];
+
+Konvertierung string.split() => Array
+ let [latitude, longitude, ...rest] = coordinates.split(',');
