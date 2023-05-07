@@ -1,19 +1,19 @@
 // best way to check for null, 0, false and 'undefined', NaN, ''
 
-var value;
+var value; // undefined
 if (value) {
-	// will evaluate to true if value is not:
-	//     null
-	//     undefined
-	//     NaN
-	//     empty string ("")
-	//     0
-	//     false
-    // will evaluate to true if value is:
+    // will evaluate to true for:
     //     true
     //     " "
     //     <>0
     //     {}
+	// will evaluate to false for:
+	//     NaN
+	//     empty string ("")
+	//     0
+	//     undefined
+	//     null
+	//     false
 }
 
 // Furthermore, if you do not know whether a variable exists (that means, if it was declared) you should check with the typeof operator. For instance
@@ -36,16 +36,20 @@ if (value === void 0) {
 }
 if (value != void 0) {
 	// will evaluate to true if value
-	//		NaN
-	//     	empty string ("")
-	//     	0
-	//     	false
+	//      NaN
+	//      empty string ("")
+    //      " "
+	//      0
+	//      false
+    //      {}
 }
 if (value !== void 0) {
 	// will evaluate to true if value
-	//     	null
 	//     	NaN
 	//     	empty string ("")
+    //      " "
 	//     	0
 	//     	false
+    //      {}
+	//     	null
 }
