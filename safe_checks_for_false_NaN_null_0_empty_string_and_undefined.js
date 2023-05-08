@@ -1,6 +1,7 @@
 // best way to check for null, 0, false and 'undefined', NaN, ''
 
 var value; // undefined
+
 if (value) {
     // will evaluate to true for:
     //     true
@@ -30,10 +31,6 @@ if (value == void 0) {
 	//		null
 	//		undefined
 }
-if (value === void 0) {
-	// will evaluate to true if value
-	//		undefined
-}
 if (value != void 0) {
 	// will evaluate to true if value
 	//      NaN
@@ -42,6 +39,10 @@ if (value != void 0) {
 	//      0
 	//      false
     //      {}
+}
+if (value === void 0) {
+	// will evaluate to true if value
+	//		undefined
 }
 if (value !== void 0) {
 	// will evaluate to true if value
