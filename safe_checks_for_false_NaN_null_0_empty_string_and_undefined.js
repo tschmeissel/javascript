@@ -54,3 +54,39 @@ if (value !== void 0) {
     //      {}
 	//     	null
 }
+
+(function () {
+  let value = NaN; // undefined
+
+  console.log(value);
+
+  /**
+   * Expression will be true for every value which is not strictly of type boolean with value false.
+   * Will be true for
+   *  NaN
+   *  0,
+   *  <> 0,
+   *  {},
+   *  true,
+   *  "",
+   *  " ",
+   *  null,
+   *  undefined
+   * Will be false for
+   *  false
+   */
+  if (value !== false) {
+    console.log("true");
+  } else {
+    console.log("false");
+  }
+
+  /**
+   * better
+   */
+  if (value === false) {
+    console.log("false");
+  } else {
+    console.log("true")
+  }
+})();
