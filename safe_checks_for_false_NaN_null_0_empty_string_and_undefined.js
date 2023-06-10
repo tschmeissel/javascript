@@ -120,3 +120,24 @@ if (value !== void 0) {
     console.log("false");
   }
 })();
+
+/**
+ * How the bang bang you're boolean operator works.
+ */
+class DoubleNegationOperator {
+  init(): void {
+    // truthy
+    console.log("!!true", !!true);
+    console.log("!!\" \"", !!" ");
+    console.log("!!<>0", !!1);
+    console.log("!!{}", !!{});
+
+    // falsy
+    console.log("!!NaN", !!NaN);
+    console.log("!!\"\"", !!"");
+    console.log("!!0", !!0);
+    console.log("!!undefined", !!undefined);
+    console.log("!!null", !!null);
+    console.log("!!false", !!false);
+  }
+}
