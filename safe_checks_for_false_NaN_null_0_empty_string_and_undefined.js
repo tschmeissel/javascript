@@ -99,6 +99,7 @@ if (value !== void 0) {
   /**
    * Expression will be true for a boolean with value false.
    * Its a loose comparison which means implicit type conversion.
+   * Has potential for unexpected results.
    * Will be true for
    *  NaN
    *  <> 0,
