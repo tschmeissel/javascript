@@ -9,12 +9,12 @@ if (value) {
     //     <>0
     //     {}
 	// will evaluate to false for:
-	//     *NaN
-	//     *empty string ("")
-	//     *0
-	//     *undefined
-	//     *null
-	//     *false
+	//     NaN
+	//     empty string ("")
+	//     0
+	//     undefined
+	//     null
+	//     false
 }
 
 // Furthermore, if you do not know whether a variable exists (that means, if it was declared) you should check with the typeof operator. For instance
