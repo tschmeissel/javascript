@@ -9,12 +9,12 @@ if (value) {
     //     <>0
     //     {}
 	// will evaluate to false for:
-	//     NaN
-	//     empty string ("")
-	//     0
-	//     undefined
-	//     null
-	//     false
+	//     *NaN
+	//     *empty string ("")
+	//     *0
+	//     *undefined
+	//     *null
+	//     *false
 }
 
 // Furthermore, if you do not know whether a variable exists (that means, if it was declared) you should check with the typeof operator. For instance
@@ -88,5 +88,34 @@ if (value !== void 0) {
     console.log("false");
   } else {
     console.log("true")
+  }
+})();
+
+(function () {
+  let value = null; // undefined
+
+  console.log(value);
+
+  /**
+   * Expression will be true for a boolean with value false.
+   * Its a loose comparison which means implicit type conversion.
+   * Will be true for
+   *  NaN
+   *  <> 0,
+   *  {},
+   *  true,
+   *  null,
+   *  undefined,
+   * "string"
+   * Will be false for
+   *  0,
+   *  "",
+   *  " ",
+   *  false
+   */
+  if (value != false) {
+    console.log("true");
+  } else {
+    console.log("false");
   }
 })();
