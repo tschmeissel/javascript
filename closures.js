@@ -1,6 +1,3 @@
-/**
- * 
- */
 // https://developer.mozilla.org/de/docs/Web/JavaScript/Closures
 // Lesezeichen: Closure Scope Chain
 
@@ -73,6 +70,11 @@
  *(Variablen und Parameter) enthält. Die innere Funktion ist wie ein kleines Kind, das in diesem Paket aufwächst.
  * Auch wenn das Paket (die äußere Funktion) geschlossen und beiseite gelegt wird, kann das Kind (die innere Funktion)
  * immer noch auf die Gegenstände im Paket zugreifen.
+ */
+/**
+ * What is a closure in JavaScript? Answer: A closure is an inner function that has access to the outer function's
+ * variables and parameters. It allows the inner function to access and manipulate the outer function's variables,
+ * even after the outer function has returned. 
  */
 var makeCounter = function() {
   var privateCounter = 0;
