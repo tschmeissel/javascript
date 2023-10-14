@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 // https://developer.mozilla.org/de/docs/Web/JavaScript/Closures
 // Lesezeichen: Closure Scope Chain
 
@@ -62,6 +65,15 @@
 //counter.decrement();
 //console.log(counter.value()); // logs 1
 
+/**
+ * Was ist ein Closure?
+ * Hier ist eine einfache Erklärung:
+
+ * Stell dir vor, dass die äußere Funktion ein "Paket" ist, das sowohl eine Funktion als auch einige "Gegenstände"
+ *(Variablen und Parameter) enthält. Die innere Funktion ist wie ein kleines Kind, das in diesem Paket aufwächst.
+ * Auch wenn das Paket (die äußere Funktion) geschlossen und beiseite gelegt wird, kann das Kind (die innere Funktion)
+ * immer noch auf die Gegenstände im Paket zugreifen.
+ */
 var makeCounter = function() {
   var privateCounter = 0;
   function changeBy(val) {
