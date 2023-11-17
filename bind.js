@@ -1,6 +1,9 @@
 // demonstration of the standard functions bind
 // its all about the current context a function is executed in
 
+//
+// first example
+//
 var button = {
 	handler: null,
 	// Funktion, die einen callback handler erwartet
@@ -36,3 +39,18 @@ button.onClick(function() {
 });
 
 button.click();
+
+//
+// second example
+//
+function printThisAndData(...data) {
+  console.log(this.data, ...data);
+}
+
+const obj = { data: 0 };
+const data = [1, 2, 3];
+
+const printObjAndData = printThisAndData.bind(obj);
+
+printObjAndData(data);                  // logs: 0 [1, 2, 3]
+printObjAndData(...data);               // logs: 0 1 2 3
