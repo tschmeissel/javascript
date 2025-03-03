@@ -19,21 +19,10 @@ Wozu sind die gut?
 
 /^.*$/.test("some string")
 
-var context = "Workf" 
-/[workflow|processes|startable]/gi.test(context)
-=> true
-
-var context = "workflow" 
-/["workflow","processes","startable"]/gi.test(context)
-/["workflow","processes","startable"]?/gi.test("lkasjdf")
-
-/workflow|processes|startable/gi.test("workflow")
-=>
-true
-
-/workflow|processes|startable/gi.test("workflo")
-=>
-false
+/(workflow|processes|startable)/gi.test("Workf")
+=> false
+/(workflow|processes|startable)/gi.test("Workflow")
+=> false
 
 Ob [], {} oder () vorkommt
  /(\(\))|(\[\])|(\{\})/;
