@@ -19,10 +19,6 @@ Wozu sind die gut?
 
 /^.*$/.test("some string")
 
-var context = "Workflow" 
-/[workflow|processes|startable]/gi.test(context)
-=> true
-
 var context = "Workf" 
 /[workflow|processes|startable]/gi.test(context)
 => true
